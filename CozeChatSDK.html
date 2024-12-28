@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>新房宝AI咨询Demo</title>
+    <style>
+        /* 使 body 元素充满整个视口 */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* 假设这是一个要显示的元素，比如扣子智能体窗口的容器 */
+        #agent-container {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #ccc;
+        }
+		/*
+		#position_demo {
+            position: absolute;
+            right: 10px;
+            bottom: 20px;
+        }
+		*/
+    </style>
+</head>
+
+<body>
+<h1>新房宝AI咨询Demo</h1>
+<div id="新房宝AI咨询Demo"></div>
+    <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.0/libs/cn/index.js"></script>
+    <script>
+    const cozeWebSDK = new CozeWebSDK.WebChatClient({
+	  config: {
+		  // 智能体 ID：
+		botId: '7449292058894303266',
+	  },
+	  ui:{
+		  chatBot: {
+			title: "新房宝AI咨询Demo",
+			uploadable: false
+		  }}
+	});
+	cozeWebSDK.showChatBot();
+	</script>
+
+</body>
+</html>
